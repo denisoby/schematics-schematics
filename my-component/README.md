@@ -1,3 +1,8 @@
+npm run build -- -w #watch
+schematics .:my-component --name=test --dry-run=false
+node --inspect-brk $(which schematics) .:my-component --name=test
+
+
 # Getting Started With Schematics
 
 This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
