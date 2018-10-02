@@ -6,7 +6,8 @@ function myComponent(options) {
     console.log('myComponent v0.0.2', options);
     const componentOptions = Object.assign({}, options, {
         prefix: 'rj',
-        path: '',
+        path: options.path,
+        module: options.module,
         // project ?
         // module ?
         // export: true, ?

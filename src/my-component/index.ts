@@ -6,7 +6,8 @@ export function myComponent(options: any): Rule {
   console.log('myComponent v0.0.2', options);
   const componentOptions = Object.assign({}, options, {
     prefix: 'rj',
-    path: '', // get default path from component schematics
+    path: options.path,
+    module: options.module,
     // project ?
     // module ?
     // export: true, ?
