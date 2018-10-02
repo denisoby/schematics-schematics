@@ -1,33 +1,17 @@
 npm run build -- -w #watch
+
 schematics .:my-component --name=test --dry-run=false
 node --inspect-brk $(which schematics) .:my-component --name=test
 
 
-# Getting Started With Schematics
+IN TEST PROJECT
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+npm link ../schematics-schematics
 
-### Testing
+// doesn't fulfill "project" option from defaults, unlike "ng g"
+schematics schematics-schematics:my-component --project schematics-test --name=test
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+ng g schematics-schematics:my-component --name=test
 
-Check the documentation with
-```bash
-schematics --help
-```
-
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
-```
-
-That's it!
+git reset --hard HEAD && git clean -fd
  

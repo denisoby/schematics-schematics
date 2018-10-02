@@ -3,13 +3,11 @@ import {chain, externalSchematic, Rule, SchematicContext, Tree} from '@angular-d
 const licenseText = 'SomeLegalLicenseText:)';
 
 export function myComponent(options: any): Rule {
-  console.log('myComponent v0.0.2', options);
+  // console.log('myComponent v0.0.2', options);
   const componentOptions = Object.assign({}, options, {
     prefix: 'rj',
     path: options.path,
     module: options.module,
-    // project ?
-    // module ?
     // export: true, ?
     changeDetection: 'OnPush',
     name: options.name + '-grid',
